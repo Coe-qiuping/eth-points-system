@@ -1,0 +1,29 @@
+{
+  "name": "eth-points-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "以太坊通用积分系统：发行、转账、消耗与兑换",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "deploy": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:inproc": "hardhat run scripts/deploy.js",
+    "seed": "hardhat run scripts/seed-demo.js --network localhost",
+    "frontend:dev": "vite --config frontend/vite.config.js frontend",
+    "frontend:build": "vite build --config frontend/vite.config.js frontend",
+    "frontend:preview": "vite preview --config frontend/vite.config.js frontend --port 5175"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "5.0.0",
+    "hardhat": "2.28.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "5.0.2",
+    "ethers": "6.15.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "vite": "5.4.11",
+    "@vitejs/plugin-react": "4.3.4"
+  }
+}
