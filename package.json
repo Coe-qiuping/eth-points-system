@@ -4,15 +4,15 @@
   "private": true,
   "description": "以太坊通用积分系统：发行、转账、消耗与兑换",
   "scripts": {
-    "compile": "hardhat compile",
-    "test": "hardhat test",
-    "node": "hardhat node",
-    "deploy": "hardhat run scripts/deploy.js --network localhost",
-    "deploy:inproc": "hardhat run scripts/deploy.js",
-    "seed": "hardhat run scripts/seed-demo.js --network localhost",
-    "frontend:dev": "vite --config frontend/vite.config.js frontend",
-    "frontend:build": "vite build --config frontend/vite.config.js frontend",
-    "frontend:preview": "vite preview --config frontend/vite.config.js frontend --port 5175"
+    "compile": "node node_modules/hardhat/internal/cli/cli.js compile",
+    "test": "node node_modules/hardhat/internal/cli/cli.js test",
+    "node": "node node_modules/hardhat/internal/cli/cli.js node",
+    "deploy": "node node_modules/hardhat/internal/cli/cli.js run scripts/deploy.js --network localhost",
+    "deploy:inproc": "node node_modules/hardhat/internal/cli/cli.js run scripts/deploy.js",
+    "gen:config": "node scripts/gen-frontend-config.js",
+    "dev": "node node_modules/vite/bin/vite.js frontend --port 5175",
+    "build": "node node_modules/vite/bin/vite.js build frontend",
+    "preview": "node node_modules/vite/bin/vite.js preview frontend --port 5175"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "5.0.0",
